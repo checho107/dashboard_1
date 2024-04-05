@@ -1,0 +1,18 @@
+
+  /* Clase para manejar el carrusel */
+  .carousel {
+    width: 100%;
+    margin-top: 1px; /* Ajusta el margen superior según sea necesario */
+    
+  }
+  
+  .carousel-item {
+    text-align: center;
+  }
+  
+  .carousel img {
+    width: 80%;
+    height: 400px;
+    border-radius: 5px;
+    object-fit: cover;
+  }
