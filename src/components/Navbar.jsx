@@ -4,6 +4,7 @@ import * as AiIcons from 'react-icons/ai';
 import { Link, useHistory } from 'react-router-dom';
 import { SidebarData } from './SidebarData';
 import './Navbar.css';
+import game2 from '../assets/img/game2.png';
 import { IconContext } from 'react-icons';
 import { Button } from 'react-bootstrap';
 

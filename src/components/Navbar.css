@@ -1,6 +1,6 @@
 .navbar {
   
-  background-image: url('https://i.pinimg.com/564x/29/6b/4d/296b4d2764b96e2728ddf9db10cda9e2.jpg'); 
+  background: linear-gradient(to bottom, #1662a0, #00000094);
   background-size: cover;
   background-repeat: no-repeat;
   height: 80px;
@@ -154,54 +154,6 @@ span {
   transform: translateX(-200%);
 }
 
-.foto_hat{
-
-  position: absolute;
-  width: 160px;
-  height: 120px;
-  left: 40%;
-  transform: translateX(-190%);
-  margin-top: 60px;
-}
-
-.foto_hat_1{
-
-  position: absolute;
-  width: 180px;
-  height: 130px;
-  left: 40%;
-  transform: translateX(-175%);
-  margin-top: 160px;
-}
-
-.foto_hat_2{
-
-  position: absolute;
-  width: 160px;
-  height: 120px;
-  left: 40%;
-  transform: translateX(-185%);
-  margin-top: 280px;
-}
-.foto_hat_3{
-
-  position: absolute;
-  width: 160px;
-  height: 120px;
-  left: 40%;
-  transform: translateX(-185%);
-  margin-top: 390px;
-}
-
-.foto_hat_4{
-
-  position: absolute;
-  width: 860px;
-  height: 620px;
-  right: 0%;
-  transform: translateY(-08%);
-  margin-bottom: 500px;
-}
   
 .foto_text{
   position: absolute;
@@ -288,4 +240,5 @@ h2{
 .nav-menu-cerrar{
   transform: translate(800%, -1%);
 }
+
 

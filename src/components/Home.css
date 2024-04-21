@@ -1,18 +1,524 @@
+body {
+  background-image: url('https://i.pinimg.com/564x/19/9d/54/199d5444e7a6af2b7dba760a16c87bea.jpg');
+  background-size: 1350px 900px; /* Ancho x Alto en píxeles */
+  height: 100vh; /* Esto hará que el contenedor ocupe el 100% de la altura de la ventana */
+  
+}
+.background {
+  /* Aplicar opacidad */
+  opacity: 10%; /* Puedes ajustar el valor entre 0 y 1 */
+  
+  /* Aplicar desenfoque */
+  filter: blur(500px); /* Puedes ajustar el valor de desenfoque según lo desees */
+}
 
-  /* Clase para manejar el carrusel */
-  .carousel {
-    width: 100%;
-    margin-top: 1px; /* Ajusta el margen superior según sea necesario */
-    
-  }
+.carousel {
+  width: 100%;
+  margin-top: 40px;
+  /* Ajusta el margen superior según sea necesario */
+
+}
+
+.carousel-item {
+  text-align: center;
+}
+
+.carousel img {
+  width: 80%;
+  height: 400px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  /* Aquí puedes agregar los estilos que desees */
+  color: rgb(0, 0, 0);
+  /* Cambia el color del texto */
+  background-color: rgba(0, 0, 0, 0.212);
+  /* Cambia el color de fondo con transparencia */
+  padding: 10px;
+  /* Añade espacio alrededor del texto */
+  text-align: center;
+  /* Centra el texto */
+}
+
+.accordion {
+  opacity: 85%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.accordion-body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.titulo{
+ font-family: Georgia, 'Times New Roman', Times, serif;
+font-size: 3rem;
+color: '#7789d6' ;
+text-align: left;
+text-shadow: '2px 2px 4px rgba(0, 0, 0, 0.5)';
+transform: translate(-120px, 50px);
+
+}
+
+.serviciocliente{
+  transform: translate(-400px, -380px);
+}
+
+.conversacion{
+ transform: translate(120px, 10px);
+}
+
+.containergrupo {
+  height: 100vh; /* Esto hará que el contenedor ocupe el 100% de la altura de la ventana */
+ 
+}
+
+.chat-card {
+  width: 300px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transform: translate(600px, 80px);
+}
+
+.chat-header {
+  padding: 10px;
+  background-color: #f2f2f2;
+  display: flex;
   
-  .carousel-item {
-    text-align: center;
+}
+
+.chat-body {
+  padding: 20px;
+}
+
+.message {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.incoming {
+  background-color: #e1e1e1;
+}
+
+.outgoing {
+  background-color: #f2f2f2;
+  text-align: right;
+}
+
+.message p {
+  font-size: 14px;
+  color: #333;
+  margin: 0;
+}
+
+.chat-footer {
+  padding: 10px;
+  background-color: #f2f2f2;
+  display: flex;
+}
+
+.chat-footer input[type="text"] {
+  flex-grow: 1;
+  padding: 5px;
+  border: none;
+  border-radius: 3px;
+}
+
+.chat-footer button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #4285f4;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.chat-footer button:hover {
+  background-color: #0f9d58;
+}
+
+@keyframes chatAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
   }
-  
-  .carousel img {
-    width: 80%;
-    height: 400px;
-    border-radius: 5px;
-    object-fit: cover;
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
+}
+
+.chat-card .message {
+  animation: chatAnimation 0.3s ease-in-out;
+  animation-fill-mode: both;
+  animation-delay: 0.1s;
+}
+
+.chat-card .message:nth-child(even) {
+  animation-delay: 0.2s;
+}
+
+.chat-card .message:nth-child(odd) {
+  animation-delay: 0.3s;
+}
+
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  transform: translate(990px, -800px);
+}
+
+.up {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+}
+
+.down {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+}
+
+.card1 {
+  width: 90px;
+  height: 90px;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 90px 5px 5px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: .2s ease-in-out;
+}
+
+.instagram {
+  margin-top: 1.5em;
+  margin-left: 1.2em;
+  fill: #cc39a4;
+}
+
+.card2 {
+  width: 90px;
+  height: 90px;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 5px 90px 5px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: .2s ease-in-out;
+}
+
+.facebook {
+  margin-top: 1.5em;
+  margin-left: -.9em;
+  fill: #03A9F4;
+}
+
+.card3 {
+  width: 90px;
+  height: 90px;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 5px 5px 5px 90px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: .2s ease-in-out;
+}
+
+.whatsapp {
+  margin-top: -.6em;
+  margin-left: 1.2em;
+  fill: #00ff00;
+}
+
+.card4 {
+  width: 90px;
+  height: 90px;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 5px 5px 90px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: .2s ease-in-out;
+}
+
+.gmail {
+  margin-top: -.9em;
+  margin-left: -1.2em;
+  fill: #f14336;
+}
+
+.card1:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #cc39a4;
+}
+
+.card1:hover .instagram {
+  fill: white;
+}
+
+.card2:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #1877f2;
+}
+
+.card2:hover .facebook {
+  fill: white;
+}
+
+.card3:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #00ff00;
+}
+
+.card3:hover .whatsapp {
+  fill: white;
+}
+
+.card4:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #FF0004;
+}
+
+.card4:hover .gmail {
+  fill: white;
+}
+/* css de vista grupo*/
+
+.card {
+  --main-color: #000;
+  --submain-color: #78858F;
+  --bg-color: #fff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  position: relative;
+  width: 300px;
+  height: 384px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  background: var(--bg-color);
+  transform: translate(100px, 40px);
+}
+
+.card__img {
+  height: 192px;
+  width: 100%;
+}
+
+.card__img svg {
+  height: 100%;
+  border-radius: 20px 20px 0 0;
+}
+
+.card__avatar {
+  position: absolute;
+  width: 114px;
+  height: 114px;
+  background: var(--bg-color);
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: calc(50% - 57px);
+}
+
+.card__avatar svg {
+  width: 100px;
+  height: 100px;
+}
+
+.card__title {
+  margin-top: 60px;
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--main-color);
+}
+
+.card__subtitle {
+  margin-top: 10px;
+  font-weight: 400;
+  font-size: 15px;
+  color: var(--submain-color);
+}
+
+.card__btn {
+  margin-top: 15px;
+  width: 76px;
+  height: 31px;
+  border: 2px solid var(--main-color);
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 11px;
+  color: var(--main-color);
+  background: var(--bg-color);
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+.card__btn-solid {
+  background: var(--main-color);
+  color: var(--bg-color);
+}
+
+.card__btn:hover {
+  background: var(--main-color);
+  color: var(--bg-color);
+}
+
+.card__btn-solid:hover {
+  background: var(--bg-color);
+  color: var(--main-color);
+}
+
+/*footer*/
+
+.footer {
+  margin-top: 50px;
+  background: linear-gradient(to bottom, #1662a0, #000000);
+  color: #ffffff;
+  padding: 24px 0;
+}
+
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer__section {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.footer__section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.footer__section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer__section ul li {
+  margin-bottom: 10px;
+}
+
+.footer__section ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-links li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-links li a {
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
+.footer__copyright {
+  text-align: left;
+  margin-top: 20px;
+  margin-left: 45px;
+}
+.cardhome {
+  width: fit-content;
+  height: fit-content;
+  background-color:rgba(75, 136, 177, 0.144);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 25px;
+  gap: 10px;
+  box-shadow: 0px 0px 20px rgba(218, 58, 58, 0.055);
+  flex-direction: row; /* Agregamos esta línea para colocar los íconos horizontalmente */
+  transform: translateY(15px);
+}
+
+/* for all social containers*/
+.socialContainer {
+  width: 52px;
+  height: 52px;
+  background-color: rgb(44, 44, 44);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: .3s;
+}
+/* instagram*/
+.containerOne:hover {
+  background-color: #d62976;
+  transition-duration: .3s;
+}
+/* twitter*/
+.containerTwo:hover {
+  background-color: #00acee;
+  transition-duration: .3s;
+}
+/* linkdin*/
+.containerThree:hover {
+  background-color: #0072b1;
+  transition-duration: .3s;
+}
+/* Whatsapp*/
+.containerFour:hover {
+  background-color: #128C7E;
+  transition-duration: .3s;
+}
+
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: .3s;
+}
+
+.socialSvg {
+  width: 17px;
+}
+
+.socialSvg path {
+  fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+

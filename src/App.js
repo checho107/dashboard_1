@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import Home from './pages/Home';
@@ -12,12 +12,24 @@ import Login from './pages/Login';
 import Navbar from './components/Navbar';
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  // Inicializar el estado de isLoggedIn con el valor almacenado en el almacenamiento local
+  const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('isLoggedIn') === 'true');
 
   // Función para manejar el inicio de sesión
   const handleLogin = () => {
     setIsLoggedIn(true);
   };
+
+  // Función para manejar el cierre de sesión
+  const handleLogout = () => {
+    setIsLoggedIn(false);
+    localStorage.removeItem('isLoggedIn');
+  };
+
+  // Guardar el estado de isLoggedIn en el almacenamiento local cuando cambie
+  useEffect(() => {
+    localStorage.setItem('isLoggedIn', isLoggedIn);
+  }, [isLoggedIn]);
 
   return (
     <Router>
@@ -31,7 +43,7 @@ function App() {
           {/* Redireccionar a la página de inicio si no está autenticado */}
           {isLoggedIn ? (
             <div>
-              <Navbar />
+              <Navbar onLogout={handleLogout} />
               <Switch>
                 <Route path='/reports' component={Reports} />
                 <Route path='/products' component={Products} />
@@ -39,8 +51,7 @@ function App() {
                 <Route path='/grupos' component={Grupos} />
                 <Route path='/mensajes' component={Mensajes} />
                 <Route path='/soporte' component={Soporte} />
-                <Route path='/' exact component={Home} />
-              
+                <Route path='/home' exact component={Home} />
               </Switch>
             </div>
           ) : (

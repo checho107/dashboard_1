@@ -11,13 +11,29 @@ function Cerrar() {
 
   return (
     <div className='cerrar'>
-      <img className='foto_cerrar' src={cerrar} />
-      <button className="btn btn-primary" onClick={handleVolverAlInicio}>
-        <a className="btn-link text-white">
-          Volver al inicio
-        </a>
+      <img className='foto_cerrar' src={cerrar} width="260" height="169" />
+      <button
+        onClick={handleVolverAlInicio}
+        style={{
+          position: 'relative',
+          padding: '10px 20px',
+          borderRadius: '7px',
+          border: '1px solid rgb(61, 106, 255)',
+          fontSize: '14px',
+          textTransform: 'uppercase',
+          fontWeight: '600',
+          letterSpacing: '2px',
+          background: 'transparent',
+          color: '#000000',
+          overflow: 'hidden',
+          boxShadow: '0 0 10px 5px rgba(56, 140, 179, 0.5)',
+          transition: 'all 0.2s ease-in',
+        }}
+      >
+        Cerrar Sesión
       </button>
-    </div>
+
+    </div >
   );
 }
 

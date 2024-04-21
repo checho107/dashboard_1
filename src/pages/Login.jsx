@@ -16,8 +16,8 @@ const Login = ({ onLogin }) => {
     if (username.trim() === '' || password.trim() === '') {
       alert('Por favor, complete ambos campos');
     } else if (username === 'sergio' && password === '123456') {
-        onLogin(); // Asumo que esta función está definida en algún lugar
-        history.push('/home'); // Asumo que tienes acceso al objeto history
+        onLogin(); 
+        history.push('/home'); 
     } else {
         alert('Usuario o contraseña incorrectos');
     }
